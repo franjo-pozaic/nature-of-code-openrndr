@@ -1,3 +1,13 @@
+# Nature of Code with OpenRNDR and Kotlin
+
+This repository contains my implementations of various exercises and challenges from Daniel Shiffman's book, "The Nature of Code," using the OpenRNDR framework in Kotlin. This project aims to explore creative coding concepts such as vectors, forces, oscillations, particle systems, and in parallel to learn some Kotlin and the openrndr framework. The repo is a clone of the https://github.com/openrndr/openrndr-template project.
+
+![Nature of code](https://natureofcode.com/static/18df89731f3e9900d7f93faf5febcb7e/a6352/0.webp)
+
+https://natureofcode.com/
+
+https://openrndr.org/
+
 # OPENRNDR template project
 
 A feature rich template for creating OPENRNDR programs based on [Gradle/Kts](https://en.wikipedia.org/wiki/Gradle).
@@ -35,34 +45,3 @@ Switch to the [next-version branch](https://github.com/openrndr/openrndr-templat
 You can add other dependencies needed by your project to your [build.gradle.kts](build.gradle.kts) file, inside the `dependencies { }` block. 
 
 Remember to reload the Gradle configuration after changing any dependencies.
-
-## Run other Kotlin programs from the command line
-
-By default `./gradlew run` runs a program called `TemplateProgram.kt` but a different one can be provided as an argument:
-
-To run `src/main/kotlin/myProgram.kt`
-
-    ./gradlew run -Popenrndr.application=MyProgramKt
-
-To run `src/main/kotlin/foo/bar/myProgram.kt` (assuming `package foo.bar` in myProgram.kt)
-
-    ./gradlew run -Popenrndr.application=foo.bar.MyProgramKt
-
-## Github Actions
-
-This repository contains a number of Github Actions under `./github/workflows`.
-
-[build-on-commit.yaml](.github/workflows/build-on-commit.yaml) runs a basic build on every commit, 
-which can help detect issues in the source code.
-
-[publish-binaries.yaml](.github/workflows/publish-binaries.yaml) publishes binaries for Linux, Mac and Windows 
-any time a commit is tagged with a version number like `v1.*`. 
-
-For example, we can create and push a tag with these git commands:
-
-    git tag -a v1.0.0 -m "v1.0.0"
-    git push origin v1.0.0
-
-The progress of the running actions can be followed under the Actions tab in GitHub. 
-Once complete, the executables will be found under the Releases section.
-
